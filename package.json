@@ -1,0 +1,11 @@
+{
+  "name": "hackfs-ai-nft",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "dotenv": "^16.1.3"
+  }
+}
