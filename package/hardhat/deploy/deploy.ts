@@ -1,6 +1,6 @@
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
 import { DeployFunction } from 'hardhat-deploy/types';
-import { hashiAddressGnosis, ghoulsAddress } from "../utils/constants";
+import { hashiAddressFVM, ghoulsAddress } from "../utils/constants";
 import { ethers, network, run } from "hardhat";
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
@@ -11,7 +11,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
 	const hashverifier = await deploy('HashiVerifier', {
 		from: deployer,
-		args: [hashiAddressGnosis],
+		args: [hashiAddressFVM],
 		log: true,
 		autoMine: true, // speed up deployment on local network (ganache, hardhat), no effect on live networks
 	});
@@ -29,7 +29,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 	// console.log('Verifying HashVerifier.... ')
 	await run(`verify:verify`, {
 		address: hashverifier.address,
-		constructorArguments: [hashiAddressGnosis],
+		constructorArguments: [hashiAddressFVM],
 	});
 	// console.log('Verifying HashVerifier.... ')
 	await run(`verify:verify`, {
