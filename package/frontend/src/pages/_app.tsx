@@ -55,16 +55,16 @@ const { chains, publicClient } = configureChains(
   ]
 );
 
-const projectId = 'YOUR_PROJECT_ID';
+const projectId = 'HACK-FS-AI-NFT';
 
 const { wallets } = getDefaultWallets({
-  appName: 'Chat GPT NFT',
+  appName: 'Hackfs AI NFT',
   projectId,
   chains,
 });
 
 const demoAppInfo = {
-  appName: 'Chat GPT NFT',
+  appName: 'Hackfs AI NFT',
 };
 
 const connectors = connectorsForWallets([
