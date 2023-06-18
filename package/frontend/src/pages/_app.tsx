@@ -23,7 +23,7 @@ import ApplicationUpdater from '@/state/updater';
 import { Toaster } from "react-hot-toast";
 const fvmTestnet: Chain = {
 
-  id: 314159,
+  id: 100,
   name: 'FVM Testnet',
   network: 'FVM Testnet',
   nativeCurrency: {
