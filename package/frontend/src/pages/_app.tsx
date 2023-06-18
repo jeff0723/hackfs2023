@@ -49,7 +49,7 @@ const fvmTestnet: Chain = {
 }
 
 const { chains, publicClient } = configureChains(
-  [fvmTestnet, gnosis, aurora, mainnet, polygon, optimism, arbitrum, filecoin],
+  [fvmTestnet, filecoin],
   [
     publicProvider()
   ]
