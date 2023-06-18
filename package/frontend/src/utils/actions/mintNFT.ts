@@ -2,6 +2,7 @@ import { HACKFS_AI_NFT_ABI } from '@/constant/abis';
 import { HACKFS_AI_NFT_ADDRESS } from '@/constant/addresses';
 import { TransactionReceipt } from '@ethersproject/abstract-provider';
 import { prepareWriteContract, writeContract, waitForTransaction } from '@wagmi/core';
+import { parseGwei } from 'viem';
 export const mintNFT = async ({
     to,
     tokenId,
@@ -31,7 +32,10 @@ export const mintNFT = async ({
             signature,
             storageRoot,
             stateProof,
-            storageProof]
+            storageProof],
+        maxFeePerGas: parseGwei('100'),
+        maxPriorityFeePerGas: parseGwei('100'),
+
     });
 
     // Execute the transaction
