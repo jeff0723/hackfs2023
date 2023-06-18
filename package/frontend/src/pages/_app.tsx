@@ -17,13 +17,39 @@ import {
   ledgerWallet,
 } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum, aurora, gnosis } from 'wagmi/chains';
+import { mainnet, polygon, optimism, arbitrum, aurora, gnosis, filecoin, Chain } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import ApplicationUpdater from '@/state/updater';
 import { Toaster } from "react-hot-toast";
+const fvmTestnet: Chain = {
+
+  id: 314159,
+  name: 'FVM Testnet',
+  network: 'FVM Testnet',
+  nativeCurrency: {
+    decimals: 18,
+    name: "Test Filecoin",
+    symbol: "tFIL",
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc.ankr.com/filecoin_testnet'],
+    },
+    public: {
+      http: ['https://rpc.ankr.com/filecoin_testnet'],
+    }
+  },
+  blockExplorers: {
+    default: {
+      name: "Calibration Explorer",
+      url: "https://calibration.filscout.com/en",
+    }
+  },
+  testnet: true
+}
 
 const { chains, publicClient } = configureChains(
-  [gnosis, aurora, mainnet, polygon, optimism, arbitrum],
+  [fvmTestnet, gnosis, aurora, mainnet, polygon, optimism, arbitrum, filecoin],
   [
     publicProvider()
   ]
