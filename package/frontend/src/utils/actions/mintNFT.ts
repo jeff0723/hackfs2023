@@ -31,7 +31,9 @@ export const mintNFT = async ({
             signature,
             storageRoot,
             stateProof,
-            storageProof]
+            storageProof],
+        maxFeePerGas: BigInt(30000000000),
+        gas: BigInt(2e7)
     });
 
     // Execute the transaction
