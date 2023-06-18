@@ -1,2 +1,2 @@
-export const HACKFS_AI_NFT_ADDRESS = '0x25B6cEF34Ca708d1f3B1d22c050592f2fE6a1e38' as `0x${string}`
-export const HASHI_VERIFIER_ADDRESS = '0x9ff4Ca38dEdD6de4C8cc0BFF03F512bDCc0B6c77' as `0x${string}`
+export const HACKFS_AI_NFT_ADDRESS = '0x9ff4Ca38dEdD6de4C8cc0BFF03F512bDCc0B6c77' as `0x${string}`
+export const HASHI_VERIFIER_ADDRESS = '0x25B6cEF34Ca708d1f3B1d22c050592f2fE6a1e38' as `0x${string}`
