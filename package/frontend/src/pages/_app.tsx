@@ -33,16 +33,16 @@ const fvmTestnet: Chain = {
   },
   rpcUrls: {
     default: {
-      http: ['https://api.calibration.node.glif.io/rpc/v1'],
+      http: ['https://gnosischain-rpc.gateway.pokt.network/'],
     },
     public: {
-      http: ['https://api.calibration.node.glif.io/rpc/v1'],
+      http: ['https://gnosischain-rpc.gateway.pokt.network/'],
     }
   },
   blockExplorers: {
     default: {
       name: "Calibration Explorer",
-      url: "https://calibration.filscout.com/en",
+      url: "https://gnosisscan.io/",
     }
   },
   testnet: true
